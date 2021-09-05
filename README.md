@@ -4,7 +4,7 @@
 
 This projet develops a small tag game simulator in ROS2 Foxy. In this simulator, a main turtle tagger needs to run after turtle players in order to tag them, which removes them from the simulator. The simulator is made of 3 ROS2 packages, ran using a single ROS2 launch file and built upon the turtlesim package.
 
-This project is the capstone project in Udemy's course ROS2 For Beginners [1]. This README serves as a final report for this project.
+This project is the capstone project in Udemy's course ROS2 For Beginners [1]. This README serves as a final report for the project.
 
 
 <img src="videos/overview.gif" height="400"/>
