@@ -37,7 +37,7 @@ Install instructions are for Linux Ubuntu 20.04.
 
 2 - Move the content of the repository into your ROS2 workspace src/ directory.
 
-    mv -i ~/github/ros2_turtle_tap_simulator/packages_src ~/ros2_ws/src
+    cp -i ~/github/ros2_turtle_tag_simulator/packages_src/* ~/ros2_ws/src
 
 ### Build & Run Simulator
 
