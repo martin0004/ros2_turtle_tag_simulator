@@ -19,11 +19,16 @@ Install instructions are for Linux Ubuntu 20.04.
 
     https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 
-2 - Create and build your ROS2 workspace.
+2 - Create your ROS2 workspace.
 
     cd
     mkdir ros2_ws
     cd ros2_ws
+    mkdir src
+
+3 - Build your ROS2 workspace (initial build, no packages yet).
+
+    cd ~/ros2_ws
     colcon build
 
 ### Install Simulator
@@ -85,10 +90,14 @@ Install instructions are for Linux Ubuntu 20.04.
 | turtle_tag_simulator_bringup    | Launch file.           |
 | turtle_tag_simulator_interfaces | Messages and services. |
 
+<br>
+
 | Message Types | Description                                   |
 |:--------------|:----------------------------------------------|
 | turtle_tag_simulator/msg/Turtle        | Name and pose of any turtle in the simulator. |
 | turtle_tag_simulator/msg/Turtles       | Array of Turtle messages.                     |
+
+<br>
 
 | Service Types | Description                                  |
 |:--------------|:---------------------------------------------|
@@ -102,6 +111,8 @@ Install instructions are for Linux Ubuntu 20.04.
 | /players_spawner       | Adds new players randomly in simulation. |
 | /tagger_control_system | Sends velocity commands to tagger.       |
 
+<br>
+
 | Topics            | Message Type                     | Description                                     |
 |:------------------|:---------------------------------|:------------------------------------------------|
 | /players          | turtle_tag_simulator/msg/Turtles | Players currently in the simulator.             |
@@ -110,6 +121,7 @@ Install instructions are for Linux Ubuntu 20.04.
 | /turtle1/pose     | turtlesim/msg/Pose               | Tagger pose & velocities                        |
 | /turtle1/cmd_vel  | geometry_msgs/msg/Twist          | Tagger linear and angular velocities command.   |
 
+<br>
 
 | Services         | Description |
 |:-----------------|-------------|
@@ -135,7 +147,8 @@ Additionnaly, the linear velocity controller is only activated if the pose angle
 # Possible Improvements
 
 - Modify the Turtle message definition so it uses the turtlesim/msg/Pose message. This would create a consistency between all types of poses used in this project.
-- ...
+- Update the simulator so player turtles move around in random directions.
+- Add dynamic constraints to the tagger movements (i.e. the tagger can currently stop instantaneously while in real life a vehicle has inertia and needs to slow down before it can completely stop or change direction).
 
 # References
 
